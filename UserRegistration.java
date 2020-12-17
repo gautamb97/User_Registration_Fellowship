@@ -36,11 +36,24 @@ public class UserRegistration {
             email();
         }
     }
+    //mobile number verification
+    public void mobileNumber(){
+        Scanner mobileNumber = new Scanner(System.in);
+        System.out.println("Enter your mobile number: ");
+        String mobile_number_verification = mobileNumber.next();
+        if (Pattern.matches("^(\\+91)?[6-9]{1}[0-9]{9}$", mobile_number_verification) == true)
+            System.out.println(mobile_number_verification);
+        else {
+            System.out.println("invalid mobile number re-enter your mobile number");
+            mobileNumber();
+        }
+    }
     public static void main(String[] args){
         System.out.println("Welcome for Registration");
         UserRegistration validation = new UserRegistration();
         validation.firstName();
         validation.lastName();
         validation.email();
+        validation.mobileNumber();
     }
 }
