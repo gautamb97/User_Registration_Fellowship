@@ -24,10 +24,23 @@ public class UserRegistration {
             lastName();
         }
     }
+    //email verification
+    public void email() {
+        Scanner email = new Scanner(System.in);
+        System.out.println("Enter your email id: ");
+        String email_verification = email.next();
+        if (Pattern.matches("^[a-z]*\\@[a-z]*\\.(com|org|com\\.co|com\\.edu)", email_verification) == true)
+            System.out.println(email_verification);
+        else {
+            System.out.println("invalid email id re-enter your email id");
+            email();
+        }
+    }
     public static void main(String[] args){
         System.out.println("Welcome for Registration");
         UserRegistration validation = new UserRegistration();
         validation.firstName();
         validation.lastName();
+        validation.email();
     }
 }
