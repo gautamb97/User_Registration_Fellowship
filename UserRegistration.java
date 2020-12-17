@@ -48,6 +48,18 @@ public class UserRegistration {
             mobileNumber();
         }
     }
+    //Password rules
+    public void password(){
+        Scanner password = new Scanner(System.in);
+        System.out.println("Enter your password: ");
+        String password_verification = password.next();
+        if (Pattern.matches("^[a-z]{8,}$", password_verification) == true)
+            System.out.println(password_verification);
+        else {
+            System.out.println("invalid password re-enter your password");
+            password();
+        }
+    }
     public static void main(String[] args){
         System.out.println("Welcome for Registration");
         UserRegistration validation = new UserRegistration();
@@ -55,5 +67,6 @@ public class UserRegistration {
         validation.lastName();
         validation.email();
         validation.mobileNumber();
+        validation.password();
     }
 }
