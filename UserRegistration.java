@@ -48,7 +48,7 @@ public class UserRegistration {
             mobileNumber();
         }
     }
-    //Password rules
+    //Password rules passing
     public void password(){
         Scanner password = new Scanner(System.in);
         System.out.println("Enter your password: ");
