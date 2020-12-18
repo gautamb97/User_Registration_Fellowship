@@ -53,7 +53,7 @@ public class UserRegistration {
         Scanner password = new Scanner(System.in);
         System.out.println("Enter your password: ");
         String password_verification = password.next();
-        if (Pattern.matches("^(?=.*[A-Z])[a-zA-Z]{8,}$", password_verification) == true)
+        if (Pattern.matches("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$", password_verification) == true)
             System.out.println(password_verification);
         else {
             System.out.println("invalid password re-enter your password");
