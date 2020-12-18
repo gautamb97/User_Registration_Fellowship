@@ -29,7 +29,7 @@ public class UserRegistration {
         Scanner email = new Scanner(System.in);
         System.out.println("Enter your email id: ");
         String email_verification = email.next();
-        if (Pattern.matches("^[a-z]*\\@[a-z]*\\.(com|org|com\\.co|com\\.edu)", email_verification) == true)
+        if (Pattern.matches("^[a-z0-9\\.\\_\\-\\+a-z0-9]*\\@[a-z0-9]*\\.(com|org|in|co|net|com\\.au|com\\.com)", email_verification) == true)
             System.out.println(email_verification);
         else {
             System.out.println("invalid email id re-enter your email id");
